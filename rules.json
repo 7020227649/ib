@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "priority": 100,
+    "action": {
+      "type": "allowAllRequests"
+    },
+    "condition": {
+      "urlFilter": "||google.com/",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/blocked.html"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https?://",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  }
+]
